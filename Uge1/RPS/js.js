@@ -38,13 +38,13 @@ function træffeValg() {
   nedtælling();
 }
 
-function vinderen() {
+function vinderen(brugerensValg, computerensValg) {
   if (brugerensValg === computerensValg) {
     draw.classList.remove("hidden");
   } else if (
-    (brugerensValg === sten && computerensValg === saks) ||
-    (brugerensValg === papir && computerensValg === sten) ||
-    (brugerensValg === saks && computerensValg === papir)
+    (brugerensValg === "rock" && computerensValg === "scissors") ||
+    (brugerensValg === "paper" && computerensValg === "rock") ||
+    (brugerensValg === "scissors" && computerensValg === "paper")
   ) {
     win.classList.remove("hidden");
   } else {
